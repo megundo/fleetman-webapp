@@ -14,7 +14,7 @@ pipeline {
       stage('Preparation') {
          steps {
             cleanWs()
-            git credentialsId: 'GitHub', url: "https://github.com/megundo/{SERVICE_NAME}"
+            git credentialsId: 'GitHub', url: "https://github.com/megundo/${SERVICE_NAME}"
          }
       }
       stage('Build') {
